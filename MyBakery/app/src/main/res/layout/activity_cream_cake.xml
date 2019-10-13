@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/backgroud"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreamCake">
+    T
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--TOOLBAR-->
+            <RelativeLayout
+                android:id="@+id/menuBar"
+                android:layout_weight="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@color/green"
+                android:splitMotionEvents="false">
+
+                <ImageButton
+                    android:id="@+id/menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/home_btn_menu_height"
+                    android:background="@color/green"
+                    android:paddingLeft="@dimen/home_btn_menu_padding"
+                    android:paddingTop="@dimen/home_btn_menu_padding"
+                    android:paddingBottom="@dimen/home_btn_menu_padding"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btn_menu" />
+
+                <ImageButton
+                    android:id="@+id/cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/home_btn_menu_height"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:background="@color/green"
+                    android:paddingLeft="@dimen/home_btn_menu_padding"
+                    android:paddingTop="@dimen/home_btn_menu_padding"
+                    android:paddingBottom="@dimen/home_btn_menu_padding"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_shopping_cart_black_24dp" />
+
+                <ImageButton
+                    android:id="@+id/bell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/home_btn_menu_height"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="52dp"
+                    android:layout_marginRight="52dp"
+                    android:background="@color/green"
+                    android:paddingLeft="@dimen/home_btn_menu_padding"
+                    android:paddingTop="@dimen/home_btn_menu_padding"
+                    android:paddingBottom="@dimen/home_btn_menu_padding"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_notifications_black_24dp" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="125dp"
+                    android:layout_height="34dp"
+                    android:layout_centerInParent="true"
+                    android:text="Cream Cake"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <!--SEARCH-->
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:iconifiedByDefault="false"
+                android:queryHint="Search Here"></SearchView>
+            <!--PANEL-->
+            <ViewFlipper
+                android:id="@+id/viewFipperCake"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/backgroudcake">
+            </ViewFlipper>
+
+            <!--BUTTON OPTION-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btnCreamCake"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cream Cake"
+                    android:textSize="12dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/transparent_bg_bordered_button"/>
+                <Button
+                    android:id="@+id/btnGiftCake"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gift Cake"
+                    android:textSize="12dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/transparent_bg_bordered_button"/>
+                <Button
+                    android:id="@+id/btnButterCake"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Butter Cake"
+                    android:textSize="12dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/transparent_bg_bordered_button"/>
+            </LinearLayout>
+            <!--List Bánh-->
+            <GridLayout
+                android:paddingTop="10dp"
+                android:layout_weight="8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:columnCount="2"
+                android:rowCount="3"
+                android:columnOrderPreserved="false">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="116dp"
+                            android:layout_gravity="center"
+                            android:paddingTop="10dp"
+                            android:src="@drawable/cake3" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@color/green"
+                            android:text="Blueberry Yogurt"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="116dp"
+                            android:layout_gravity="center"
+                            android:paddingTop="10dp"
+                            android:src="@drawable/cake4" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+
+                            android:background="@color/green"
+                            android:text="Chocolate Cloud-2"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="116dp"
+                            android:layout_gravity="center"
+                            android:paddingTop="10dp"
+                            android:src="@drawable/cake6" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+
+                            android:background="@color/green"
+                            android:text="Chocolate Cloud"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="116dp"
+                            android:layout_gravity="center"
+                            android:paddingTop="10dp"
+                            android:src="@drawable/cake7" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+
+                            android:background="@color/green"
+                            android:text="Cream Cake-3"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </GridLayout>
+
+        </LinearLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

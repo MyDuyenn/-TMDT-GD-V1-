@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".CheckOutAddress">
+
+    <RelativeLayout
+        android:id="@+id/menuBar"
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/green"
+        android:splitMotionEvents="false">
+
+        <ImageButton
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/home_btn_menu_height"
+            android:background="@color/green"
+            android:paddingLeft="@dimen/home_btn_menu_padding"
+            android:paddingTop="@dimen/home_btn_menu_padding"
+            android:paddingBottom="@dimen/home_btn_menu_padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Tiếm Hành Thanh Toán"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+    <!--Tiến trình-->
+    <LinearLayout
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="134dp"
+                android:layout_gravity="center"
+                android:src="@drawable/bobo2" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hình thức thanh toán"
+                    android:textSize="28dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup_diffLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioButton_tienmat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:checked="true"
+                        android:text="Tiền mặt"
+                        android:textSize="20dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_creditcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:checked="false"
+                        android:text="Creadit Card"
+                        android:textSize="20dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/radioButton_hard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:checked="false"
+                        android:text="Khác"
+                        android:textSize="20dp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!--Phương thức giao hàng-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phương thức giao hàng"
+                    android:textSize="28dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+                android:layout_weight="7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <RadioGroup
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/radioGroup_diffLevel1">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Giao Hàng Tận Nhà"
+                        android:textSize="20dp"
+                        android:layout_marginRight="15dp"
+                        android:id="@+id/radioButton_athome"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tự đến lấy"
+                        android:textSize="20dp"
+                        android:layout_marginRight="15dp"
+                        android:id="@+id/radioButton_atshop"
+                        android:checked="false" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/cart"
+                    android:layout_width="46dp"
+                    android:background="@null"
+                    android:layout_height="@dimen/home_btn_menu_height"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_shopping_cart_black_24dp" />
+                <TextView
+                    android:textSize="20sp"
+                    android:text="Item "
+                    android:textStyle="bold"
+                    android:textColor="@color/greenLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textSize="20sp"
+                    android:text="Amount"
+                    android:textStyle="bold"
+                    android:textColor="@color/greenLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnThanhtoan"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_margin="15dp"
+        android:text="Thanh Toán"
+        android:textSize="20sp"
+        android:background="@color/gray"/>
+</LinearLayout>
+

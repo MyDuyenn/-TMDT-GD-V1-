@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Dermaclara</string>
+
+    <string name="text_already_have_an_account">Already have an account?</string>
+    <string name="text_do_not_have_an_account">Don\'t have an account?</string>
+    <string name="text_sign_in">Sign in</string>
+    <string name="text_sign_up">Sign up</string>
+
+
+    <string name="create_sign_in">SIGN IN</string>
+    <string name="create_account">CREATE YOUR ACCOUNT</string>
+    <string name="name">NAME</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="email">EMAIL</string>
+    <string name="enter_email">Enter email</string>
+    <string name="password">PASSWORD</string>
+    <string name="enter_password">Enter password</string>
+    <string name="old_password">Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">CONFIRM PASSWORD</string>
+    <string name="re_enter_password">Re-enter password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+
+    <string name="profile_title">PROFILE</string>
+
+    <string name="home_title_default">MY JOURNEY</string>
+    <string name="home_face">FACE</string>
+    <string name="home_zero">0</string>
+    <string name="home_photo">photo</string>
+    <string name="home_neck">NECK &amp; CHEST</string>
+
+    <string name="nav_default_name">Janet Smith</string>
+    <string name="nav_default_email">janet@email.com</string>
+    <string name="nav_btn_home">Home</string>
+    <string name="nav_btn_profile">Profile</string>
+    <string name="nav_btn_gallery">Gallery</string>
+    <string name="nav_btn_sign_out">Logout</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="title_activity_main3">Main3Activity</string>
+
+</resources>

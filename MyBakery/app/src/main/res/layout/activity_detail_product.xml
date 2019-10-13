@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud"
+    android:orientation="vertical"
+    tools:context=".DetailProduct">
+    <RelativeLayout
+        android:id="@+id/menuBar"
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/green"
+        android:splitMotionEvents="false">
+
+        <ImageButton
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/home_btn_menu_height"
+            android:background="@color/green"
+            android:paddingLeft="@dimen/home_btn_menu_padding"
+            android:paddingTop="@dimen/home_btn_menu_padding"
+            android:paddingBottom="@dimen/home_btn_menu_padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/cart"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/home_btn_menu_height"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@color/green"
+            android:paddingLeft="@dimen/home_btn_menu_padding"
+            android:paddingTop="@dimen/home_btn_menu_padding"
+            android:paddingBottom="@dimen/home_btn_menu_padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_shopping_cart_black_24dp" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Chi tiết sản phẩm"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgviewchitietsp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/cake4"
+            android:layout_margin="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvChiTietSp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="CHOCOLATE CLOUD CREAM CAKE"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_margin="8dp"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/tvGiaThichCTSP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:text=" Price: 450.000 VND"
+                android:textColor="#f20"
+                android:layout_margin="5dp"
+                />
+            <!--khung chọn số lượng-->
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:layout_margin="10dp"
+                android:textAlignment="center">
+            </Spinner>
+            <Button
+                android:id="@+id/btnAddToCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add To Cart"
+                android:paddingTop="5dp"
+                android:background="@drawable/btn_cake"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:text="Mô tả chi tiết"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/greenLight"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tvMoTaCTSP1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="10dp"
+            android:text="- Bánh kem sô cô la ngọt ngào và mềm mại được trang trí bằng quả mọng và trái cây theo mùa"
+            android:textSize="23sp" />
+        <TextView
+            android:id="@+id/tvMoTaCTSP2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="10dp"
+            android:text="- Kích thước: 19x19"
+            android:textSize="23sp" />
+        <TextView
+            android:id="@+id/tvMoTaCTSP3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="10dp"
+            android:text="- Nhiệt độ bảo quản: ngăn mát tủ lạnh từ 20-23 độ C"
+            android:textSize="23sp" />
+        <TextView
+            android:id="@+id/tvMoTaCTSP4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="10dp"
+            android:text="- Hạn sử dụng: 3 ngày kể từ ngày sản xuất"
+            android:textSize="23sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

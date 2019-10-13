@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".CheckOutAddress">
+
+    <!--TOOLBAR-->
+    <RelativeLayout
+        android:id="@+id/menuBar"
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/green"
+        android:splitMotionEvents="false">
+
+        <ImageButton
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/home_btn_menu_height"
+            android:background="@color/green"
+            android:paddingLeft="@dimen/home_btn_menu_padding"
+            android:paddingTop="@dimen/home_btn_menu_padding"
+            android:paddingBottom="@dimen/home_btn_menu_padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Tiếm Hành Thanh Toán"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+            <ImageView
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:src="@drawable/bobo1" />
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Select Delivery Addresss"
+                    android:textSize="23dp"
+                    android:textStyle="bold"/>
+                <Button
+                    android:id="@+id/btnAddNew"
+                    android:layout_width="150dp"
+                    android:text="Add New"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:background="@color/amber"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <ListView
+                    android:id="@+id/lvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </ListView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/cart"
+                            android:layout_width="46dp"
+                            android:background="@null"
+                            android:layout_height="@dimen/home_btn_menu_height"
+                            android:layout_marginEnd="18dp"
+                            android:layout_marginRight="18dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_shopping_cart_black_24dp" />
+                        <TextView
+                            android:id="@+id/tvItem"
+                            android:textSize="20sp"
+                            android:text="Item "
+                            android:textStyle="bold"
+                            android:textColor="@color/greenLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tvAmount"
+                            android:textSize="20sp"
+                            android:text="Amount"
+                            android:textStyle="bold"
+                            android:textColor="@color/greenLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnThanhtoan"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_margin="15dp"
+                android:text="Thanh Toán"
+                android:textSize="20sp"
+                android:background="@color/gray"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
